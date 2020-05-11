@@ -1,0 +1,16 @@
+Navigation Report
+DQN Model
+	The DQN Model comprised of 3 fully connected layers with 512, 128 and 64 units respectively. The input size equals the state size while the output equals 1. This Neural network acts as a linear regression model because it outputs a value, which in this case is the expected return from a value function.
+	
+Training Algorithm
+	The DQN Algorithm is used for this project.  The algorithm has 2 special additions to the neural fitted algorithm. These upgrades are an experience buffer and a fixed target network. An experience buffer is used to store multiple experiences and trajectories of the agent to reduce correlation that exist in reinforcement learning. After 4-time steps, the agent updates its networks using the target network to calculate its loss. The target network is a separate network with its own weights. That is fixed every 4-time steps.
+Hyperparameters include:
+BUFFER_SIZE = int(1e5)  
+BATCH_SIZE = 64         
+GAMMA = 0.99            
+TAU = 1e-3              
+LR = 5e-4               
+UPDATE_EVERY = 4        
+
+Future works
+The DQN Algorithm is obsolete at this point. With recent research works, Policy gradient methods and actor-critic methods tend to outperform neural networks by a large factor
